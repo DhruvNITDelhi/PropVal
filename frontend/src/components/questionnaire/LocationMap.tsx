@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -19,10 +19,24 @@ interface LocationMapProps {
   onLocationSelect: (lat: number, lng: number) => void;
 }
 
+function MapUpdater({ center, zoom }: { center: [number, number]; zoom: number }) {
+  const map = useMapEvents({});
+  useEffect(() => {
+    map.flyTo(center, zoom, { animate: true, duration: 1.5 });
+  }, [center, zoom, map]);
+  return null;
+}
+
 function LocationMarker({ onLocationSelect, initialLat, initialLng }: LocationMapProps) {
   const [position, setPosition] = useState<L.LatLng | null>(
     initialLat && initialLng ? new L.LatLng(initialLat, initialLng) : null
   );
+
+  useEffect(() => {
+    if (initialLat && initialLng) {
+      setPosition(new L.LatLng(initialLat, initialLng));
+    }
+  }, [initialLat, initialLng]);
 
   useMapEvents({
     click(e) {
@@ -44,7 +58,8 @@ export default function LocationMap({ initialLat, initialLng, onLocationSelect }
 
   return (
     <div className="h-full w-full rounded-xl overflow-hidden border border-slate-300 relative z-0">
-      <MapContainer center={center} zoom={zoom} scrollWheelZoom={true} style={{ height: "100%", width: "100%" }}>
+      <MapContainer center={center} zoom={zoom} scrollWheelZoom={true} style={{ height: "100%", width: "100%", zIndex: 0 }}>
+        <MapUpdater center={center} zoom={zoom} />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

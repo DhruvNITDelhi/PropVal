@@ -13,6 +13,8 @@ const LocationMap = dynamic(() => import("./LocationMap"), {
 
 export default function StepLocation({ formData, updateField }: StepProps) {
   const [isLocating, setIsLocating] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isSearching, setIsSearching] = useState(false);
 
   const handleLocationSelect = async (lat: number, lng: number) => {
     updateField("lat", lat);
@@ -41,15 +43,79 @@ export default function StepLocation({ formData, updateField }: StepProps) {
     }
   };
 
+  const handleSearch = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!searchQuery.trim()) return;
+    setIsSearching(true);
+    try {
+      const res = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(searchQuery)}`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.length > 0) {
+          const result = data[0];
+          handleLocationSelect(parseFloat(result.lat), parseFloat(result.lon));
+        } else {
+          alert("Location not found. Please try a different query.");
+        }
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsSearching(false);
+    }
+  };
+
+  const handleGeolocation = () => {
+    if (!navigator.geolocation) {
+      alert("Geolocation is not supported by your browser");
+      return;
+    }
+    setIsLocating(true);
+    navigator.geolocation.getCurrentPosition(
+      (pos) => handleLocationSelect(pos.coords.latitude, pos.coords.longitude),
+      (err) => {
+        alert("Unable to retrieve your location");
+        setIsLocating(false);
+      }
+    );
+  };
+
   return (
     <div className="flex flex-col">
       <h2 className="text-2xl font-bold text-navy-800">Where is the property?</h2>
       <p className="mt-1 text-sm text-slate-500">
-        Drop a pin on the exact location. We will automatically calculate proximity to metros and airports.
+        Search for an address, use your GPS, or drop a pin directly on the map.
       </p>
 
+      {/* Search Bar */}
+      <div className="mt-4 flex flex-col sm:flex-row gap-2 relative z-10">
+        <form onSubmit={handleSearch} className="flex-1 flex gap-2">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search city, area, or society..."
+            className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm"
+          />
+          <button
+            type="submit"
+            disabled={isSearching}
+            className="px-4 py-2 bg-navy-800 text-white rounded-lg text-sm font-medium hover:bg-navy-700 disabled:opacity-50"
+          >
+            {isSearching ? "..." : "Search"}
+          </button>
+        </form>
+        <button
+          type="button"
+          onClick={handleGeolocation}
+          className="px-4 py-2 bg-brand-50 border border-brand-200 text-brand-700 rounded-lg text-sm font-medium hover:bg-brand-100 flex items-center justify-center gap-2 whitespace-nowrap"
+        >
+          <span>🎯</span> Locate Me
+        </button>
+      </div>
+
       {/* Map Section */}
-      <div className="mt-6 h-[250px] sm:h-[300px] w-full relative z-0">
+      <div className="mt-4 h-[250px] sm:h-[300px] w-full relative z-0">
         <LocationMap initialLat={formData.lat} initialLng={formData.lng} onLocationSelect={handleLocationSelect} />
       </div>
 
