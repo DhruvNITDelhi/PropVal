@@ -60,6 +60,8 @@ class ValuationRequest(BaseModel):
     locality: Optional[str] = Field(None, description="Locality or area name")
     pincode: Optional[str] = Field(None, pattern=r"^\d{6}$", description="6-digit pincode")
     zone: Optional[ZoneType] = Field(None, description="Zone classification")
+    lat: Optional[float] = Field(None, ge=8.0, le=37.0, description="Latitude (India)")
+    lng: Optional[float] = Field(None, ge=68.0, le=97.0, description="Longitude (India)")
 
     # Step 3: Size (carpet_area required)
     carpet_area_sqft: float = Field(..., gt=0, le=100000, description="Carpet area in sq.ft")

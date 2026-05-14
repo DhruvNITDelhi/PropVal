@@ -111,6 +111,7 @@ def calculate(
     gated_community: bool = False,
     has_lift: bool = False,
     power_backup: bool = False,
+    geo_features: Optional[dict] = None,
     **kwargs,
 ) -> dict:
     """
@@ -205,18 +206,28 @@ def calculate(
             })
         total_multiplier *= furn_factor
 
-    # 8. Boolean premium factors
-    bool_premiums = MULTIPLIERS["boolean_premiums"]
+    # 8. Geo features (Automated)
+    # Use kwargs value if passed explicitly, else fallback to geo_features calculation
+    metro_active = kwargs.get("metro_nearby", metro_nearby)
+    metro_label = "Metro proximity"
+    if geo_features and geo_features.get("metro_distance_km") is not None:
+        if geo_features["metro_distance_km"] <= 2.5:
+            metro_active = True
+            metro_label = f"Metro proximity (Verified {geo_features['metro_distance_km']}km)"
+    elif metro_nearby:
+        metro_active = True
+
     bool_fields = {
         "is_corner": ("Corner plot", is_corner),
         "main_road_access": ("Main road access", main_road_access),
         "park_facing": ("Park / garden facing", park_facing),
-        "metro_nearby": ("Metro proximity", metro_nearby),
+        "metro_nearby": (metro_label, metro_active),
         "gated_community": ("Gated community", gated_community),
         "has_lift": ("Lift available", has_lift),
         "power_backup": ("Power backup", power_backup),
     }
 
+    bool_premiums = MULTIPLIERS["boolean_premiums"]
     for key, (label, is_active) in bool_fields.items():
         if is_active and key in bool_premiums:
             premium = bool_premiums[key]

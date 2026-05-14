@@ -10,7 +10,7 @@ Orchestrates all three layers of the hybrid valuation engine:
 This module is the single entry point called by the API router.
 """
 
-from engine import rule_engine, ml_estimator, confidence
+from engine import rule_engine, ml_estimator, confidence, geo_engine
 from models.schemas import ValuationRequest, ValuationResponse, FactorApplied
 
 
@@ -34,6 +34,16 @@ def valuate(request: ValuationRequest) -> ValuationResponse:
     # Extract all inputs as a dict for easier passing
     inputs = request.model_dump()
 
+    # ── Layer 0: Geo Engine ───────────────────────────────────────────────
+    lat = getattr(request, 'lat', None)
+    lng = getattr(request, 'lng', None)
+    geo_features = geo_engine.extract_features(request.city, lat, lng)
+    
+    # Auto-detect metro proximity (within 2km)
+    metro_nearby = request.metro_nearby or False
+    if geo_features.get("metro_distance_km") is not None and geo_features["metro_distance_km"] <= 2.0:
+        metro_nearby = True
+
     # ── Layer 1: Rule Engine ──────────────────────────────────────────────
     rule_result = rule_engine.calculate(
         property_type=request.property_type.value,
@@ -50,10 +60,11 @@ def valuate(request: ValuationRequest) -> ValuationResponse:
         is_corner=request.is_corner or False,
         main_road_access=request.main_road_access or False,
         park_facing=request.park_facing or False,
-        metro_nearby=request.metro_nearby or False,
+        metro_nearby=metro_nearby,
         gated_community=request.gated_community or False,
         has_lift=request.has_lift or False,
         power_backup=request.power_backup or False,
+        geo_features=geo_features,
     )
 
     rule_estimate = rule_result["estimated_price"]

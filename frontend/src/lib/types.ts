@@ -26,6 +26,8 @@ export interface FormData {
   locality: string;
   pincode: string;
   zone: ZoneType | "";
+  lat: number | null;
+  lng: number | null;
   // Step 3
   carpet_area_sqft: number | "";
   buildup_area_sqft: number | "";

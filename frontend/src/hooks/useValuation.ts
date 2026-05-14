@@ -75,7 +75,7 @@ export function useValuation() {
       case 0:
         return formData.property_type !== "";
       case 1:
-        return formData.state !== "" && formData.city !== "";
+        return formData.lat !== null && formData.lng !== null && formData.city !== "";
       case 2:
         return formData.carpet_area_sqft !== "" && Number(formData.carpet_area_sqft) > 0;
       case 3:
