@@ -1,4 +1,4 @@
-<![CDATA[# PropVal — AI-Powered Property Price Predictor (Pan India)
+# PropVal — AI-Powered Property Price Predictor (Pan India)
 
 <p align="center">
   <strong>Know Your Property's True Worth — Instantly</strong>
@@ -176,4 +176,3 @@ MIT License — see [LICENSE](LICENSE) for details.
 <p align="center">
   Built with ❤️ by <a href="https://github.com/DhruvNITDelhi">Dhruv</a>
 </p>
-]]>
