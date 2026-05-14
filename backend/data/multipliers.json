@@ -1,0 +1,104 @@
+{
+  "property_type": {
+    "land": 0.65,
+    "house": 1.0,
+    "apartment": 1.08,
+    "commercial": 1.35
+  },
+  "zone": {
+    "prime": 1.0,
+    "urban": 1.0,
+    "suburban": 1.0,
+    "rural": 1.0
+  },
+  "floor_premium": {
+    "ground": 1.0,
+    "low": 1.03,
+    "mid": 1.06,
+    "high": 1.10,
+    "very_high": 1.14,
+    "top_floor": 1.08
+  },
+  "floor_ranges": {
+    "ground": [0, 0],
+    "low": [1, 3],
+    "mid": [4, 8],
+    "high": [9, 15],
+    "very_high": [16, 100],
+    "top_floor": "top"
+  },
+  "bhk_factor": {
+    "1": 0.95,
+    "2": 1.0,
+    "3": 1.05,
+    "4": 1.08,
+    "5": 1.10
+  },
+  "construction_quality": {
+    "basic": 0.85,
+    "standard": 1.0,
+    "premium": 1.20
+  },
+  "furnishing": {
+    "unfurnished": 1.0,
+    "semi": 1.05,
+    "furnished": 1.12
+  },
+  "facing": {
+    "east": 1.05,
+    "north": 1.03,
+    "north_east": 1.06,
+    "south": 1.0,
+    "west": 0.97,
+    "south_west": 0.96
+  },
+  "road_width": {
+    "narrow": { "range": [0, 20], "factor": 0.92 },
+    "medium": { "range": [20, 40], "factor": 1.0 },
+    "wide": { "range": [40, 60], "factor": 1.08 },
+    "very_wide": { "range": [60, 999], "factor": 1.15 }
+  },
+  "boolean_premiums": {
+    "is_corner": 0.05,
+    "main_road_access": 0.08,
+    "park_facing": 0.04,
+    "gated_community": 0.07,
+    "has_lift": 0.03,
+    "power_backup": 0.02,
+    "metro_nearby": 0.08,
+    "rera_registered": 0.03
+  },
+  "age_depreciation": {
+    "method": "linear_capped",
+    "rate_per_year": 0.015,
+    "min_factor": 0.50,
+    "land_exempt": true
+  },
+  "confidence_weights": {
+    "city_tier": {
+      "tier1": 20,
+      "tier2": 15,
+      "tier3": 10,
+      "other": 5
+    },
+    "fields_filled_bonus": 3,
+    "max_field_bonus": 18,
+    "locality_known": 15,
+    "model_agreement": 10,
+    "base_confidence": 35
+  },
+  "city_tiers": {
+    "tier1": ["Mumbai", "Delhi", "New Delhi", "Bengaluru", "Hyderabad", "Chennai", "Kolkata", "Pune", "Ahmedabad"],
+    "tier2": ["Noida", "Gurugram", "Ghaziabad", "Lucknow", "Jaipur", "Kochi", "Chandigarh", "Indore", "Bhopal", "Coimbatore", "Vadodara", "Surat", "Nagpur", "Visakhapatnam", "Thane", "Navi Mumbai", "Faridabad", "Mohali", "Greater Noida", "Dehradun", "Thiruvananthapuram", "Nashik", "Vijayawada", "Patna", "Bhubaneswar", "Ranchi", "Guwahati", "Mysuru", "Mangaluru", "Raipur"]
+  },
+  "market_volatility": {
+    "high": ["Mumbai", "Gurugram", "Noida", "Hyderabad", "Bengaluru", "Goa"],
+    "moderate": ["Pune", "Chennai", "Ahmedabad", "Kolkata", "Jaipur", "Lucknow", "Kochi"],
+    "low": "default"
+  },
+  "range_spread": {
+    "high_confidence": 0.10,
+    "medium_confidence": 0.15,
+    "low_confidence": 0.22
+  }
+}

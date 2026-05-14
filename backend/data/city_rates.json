@@ -1,0 +1,255 @@
+{
+  "Maharashtra": {
+    "base_rate": 8500,
+    "cities": {
+      "Mumbai": { "base_rate": 35000, "zones": { "prime": 75000, "urban": 35000, "suburban": 18000, "rural": 8000 } },
+      "Pune": { "base_rate": 9500, "zones": { "prime": 18000, "urban": 9500, "suburban": 5500, "rural": 3000 } },
+      "Nagpur": { "base_rate": 4200, "zones": { "prime": 8000, "urban": 4200, "suburban": 2500, "rural": 1200 } },
+      "Nashik": { "base_rate": 3800, "zones": { "prime": 7000, "urban": 3800, "suburban": 2200, "rural": 1000 } },
+      "Aurangabad": { "base_rate": 3500, "zones": { "prime": 6500, "urban": 3500, "suburban": 2000, "rural": 900 } },
+      "Thane": { "base_rate": 12000, "zones": { "prime": 22000, "urban": 12000, "suburban": 7000, "rural": 3500 } },
+      "Navi Mumbai": { "base_rate": 11000, "zones": { "prime": 20000, "urban": 11000, "suburban": 6500, "rural": 3200 } },
+      "Kolhapur": { "base_rate": 3200, "zones": { "prime": 6000, "urban": 3200, "suburban": 1800, "rural": 800 } },
+      "Solapur": { "base_rate": 2800, "zones": { "prime": 5000, "urban": 2800, "suburban": 1500, "rural": 700 } }
+    }
+  },
+  "Delhi": {
+    "base_rate": 18000,
+    "cities": {
+      "New Delhi": { "base_rate": 25000, "zones": { "prime": 60000, "urban": 25000, "suburban": 14000, "rural": 7000 } },
+      "Delhi": { "base_rate": 18000, "zones": { "prime": 50000, "urban": 18000, "suburban": 10000, "rural": 5000 } }
+    }
+  },
+  "Karnataka": {
+    "base_rate": 6000,
+    "cities": {
+      "Bengaluru": { "base_rate": 12000, "zones": { "prime": 28000, "urban": 12000, "suburban": 6500, "rural": 3000 } },
+      "Mysuru": { "base_rate": 4500, "zones": { "prime": 9000, "urban": 4500, "suburban": 2500, "rural": 1200 } },
+      "Mangaluru": { "base_rate": 4000, "zones": { "prime": 8000, "urban": 4000, "suburban": 2200, "rural": 1000 } },
+      "Hubli-Dharwad": { "base_rate": 3500, "zones": { "prime": 6500, "urban": 3500, "suburban": 2000, "rural": 900 } },
+      "Belagavi": { "base_rate": 3000, "zones": { "prime": 5500, "urban": 3000, "suburban": 1800, "rural": 800 } }
+    }
+  },
+  "Tamil Nadu": {
+    "base_rate": 5500,
+    "cities": {
+      "Chennai": { "base_rate": 10000, "zones": { "prime": 22000, "urban": 10000, "suburban": 5500, "rural": 2800 } },
+      "Coimbatore": { "base_rate": 5500, "zones": { "prime": 10000, "urban": 5500, "suburban": 3000, "rural": 1500 } },
+      "Madurai": { "base_rate": 3800, "zones": { "prime": 7000, "urban": 3800, "suburban": 2200, "rural": 1000 } },
+      "Tiruchirappalli": { "base_rate": 3500, "zones": { "prime": 6500, "urban": 3500, "suburban": 2000, "rural": 900 } },
+      "Salem": { "base_rate": 3000, "zones": { "prime": 5500, "urban": 3000, "suburban": 1800, "rural": 800 } }
+    }
+  },
+  "Telangana": {
+    "base_rate": 6500,
+    "cities": {
+      "Hyderabad": { "base_rate": 10500, "zones": { "prime": 22000, "urban": 10500, "suburban": 5500, "rural": 2800 } },
+      "Warangal": { "base_rate": 3000, "zones": { "prime": 5500, "urban": 3000, "suburban": 1800, "rural": 800 } },
+      "Nizamabad": { "base_rate": 2500, "zones": { "prime": 4500, "urban": 2500, "suburban": 1500, "rural": 700 } }
+    }
+  },
+  "West Bengal": {
+    "base_rate": 4500,
+    "cities": {
+      "Kolkata": { "base_rate": 8500, "zones": { "prime": 18000, "urban": 8500, "suburban": 4500, "rural": 2200 } },
+      "Howrah": { "base_rate": 5000, "zones": { "prime": 9000, "urban": 5000, "suburban": 3000, "rural": 1500 } },
+      "Siliguri": { "base_rate": 3500, "zones": { "prime": 6500, "urban": 3500, "suburban": 2000, "rural": 900 } },
+      "Durgapur": { "base_rate": 3000, "zones": { "prime": 5500, "urban": 3000, "suburban": 1800, "rural": 800 } },
+      "Asansol": { "base_rate": 2800, "zones": { "prime": 5000, "urban": 2800, "suburban": 1600, "rural": 750 } }
+    }
+  },
+  "Gujarat": {
+    "base_rate": 5000,
+    "cities": {
+      "Ahmedabad": { "base_rate": 7500, "zones": { "prime": 16000, "urban": 7500, "suburban": 4000, "rural": 2000 } },
+      "Surat": { "base_rate": 5500, "zones": { "prime": 10000, "urban": 5500, "suburban": 3000, "rural": 1500 } },
+      "Vadodara": { "base_rate": 4500, "zones": { "prime": 8500, "urban": 4500, "suburban": 2500, "rural": 1200 } },
+      "Rajkot": { "base_rate": 4000, "zones": { "prime": 7500, "urban": 4000, "suburban": 2200, "rural": 1000 } },
+      "Gandhinagar": { "base_rate": 5000, "zones": { "prime": 9000, "urban": 5000, "suburban": 2800, "rural": 1400 } }
+    }
+  },
+  "Rajasthan": {
+    "base_rate": 3500,
+    "cities": {
+      "Jaipur": { "base_rate": 5500, "zones": { "prime": 12000, "urban": 5500, "suburban": 3000, "rural": 1500 } },
+      "Jodhpur": { "base_rate": 3500, "zones": { "prime": 7000, "urban": 3500, "suburban": 2000, "rural": 900 } },
+      "Udaipur": { "base_rate": 4000, "zones": { "prime": 8000, "urban": 4000, "suburban": 2200, "rural": 1000 } },
+      "Kota": { "base_rate": 3000, "zones": { "prime": 6000, "urban": 3000, "suburban": 1800, "rural": 800 } },
+      "Ajmer": { "base_rate": 2800, "zones": { "prime": 5500, "urban": 2800, "suburban": 1600, "rural": 750 } }
+    }
+  },
+  "Uttar Pradesh": {
+    "base_rate": 3500,
+    "cities": {
+      "Noida": { "base_rate": 8500, "zones": { "prime": 16000, "urban": 8500, "suburban": 4500, "rural": 2200 } },
+      "Greater Noida": { "base_rate": 5500, "zones": { "prime": 10000, "urban": 5500, "suburban": 3000, "rural": 1500 } },
+      "Ghaziabad": { "base_rate": 6000, "zones": { "prime": 11000, "urban": 6000, "suburban": 3200, "rural": 1600 } },
+      "Lucknow": { "base_rate": 5000, "zones": { "prime": 10000, "urban": 5000, "suburban": 2800, "rural": 1400 } },
+      "Agra": { "base_rate": 3500, "zones": { "prime": 7000, "urban": 3500, "suburban": 2000, "rural": 900 } },
+      "Varanasi": { "base_rate": 3800, "zones": { "prime": 7500, "urban": 3800, "suburban": 2200, "rural": 1000 } },
+      "Kanpur": { "base_rate": 3200, "zones": { "prime": 6000, "urban": 3200, "suburban": 1800, "rural": 800 } },
+      "Prayagraj": { "base_rate": 3000, "zones": { "prime": 5500, "urban": 3000, "suburban": 1700, "rural": 780 } },
+      "Meerut": { "base_rate": 3200, "zones": { "prime": 6000, "urban": 3200, "suburban": 1800, "rural": 800 } }
+    }
+  },
+  "Haryana": {
+    "base_rate": 5000,
+    "cities": {
+      "Gurugram": { "base_rate": 12000, "zones": { "prime": 25000, "urban": 12000, "suburban": 6500, "rural": 3000 } },
+      "Faridabad": { "base_rate": 5500, "zones": { "prime": 10000, "urban": 5500, "suburban": 3000, "rural": 1500 } },
+      "Panipat": { "base_rate": 3000, "zones": { "prime": 5500, "urban": 3000, "suburban": 1800, "rural": 800 } },
+      "Ambala": { "base_rate": 3500, "zones": { "prime": 6500, "urban": 3500, "suburban": 2000, "rural": 900 } },
+      "Karnal": { "base_rate": 3000, "zones": { "prime": 5500, "urban": 3000, "suburban": 1700, "rural": 780 } }
+    }
+  },
+  "Punjab": {
+    "base_rate": 4000,
+    "cities": {
+      "Chandigarh": { "base_rate": 8000, "zones": { "prime": 16000, "urban": 8000, "suburban": 4500, "rural": 2200 } },
+      "Ludhiana": { "base_rate": 4500, "zones": { "prime": 9000, "urban": 4500, "suburban": 2500, "rural": 1200 } },
+      "Amritsar": { "base_rate": 4000, "zones": { "prime": 8000, "urban": 4000, "suburban": 2200, "rural": 1000 } },
+      "Jalandhar": { "base_rate": 3500, "zones": { "prime": 7000, "urban": 3500, "suburban": 2000, "rural": 900 } },
+      "Mohali": { "base_rate": 6000, "zones": { "prime": 12000, "urban": 6000, "suburban": 3500, "rural": 1700 } }
+    }
+  },
+  "Kerala": {
+    "base_rate": 5000,
+    "cities": {
+      "Kochi": { "base_rate": 7500, "zones": { "prime": 15000, "urban": 7500, "suburban": 4000, "rural": 2000 } },
+      "Thiruvananthapuram": { "base_rate": 6000, "zones": { "prime": 12000, "urban": 6000, "suburban": 3500, "rural": 1700 } },
+      "Kozhikode": { "base_rate": 5000, "zones": { "prime": 10000, "urban": 5000, "suburban": 2800, "rural": 1400 } },
+      "Thrissur": { "base_rate": 4500, "zones": { "prime": 9000, "urban": 4500, "suburban": 2500, "rural": 1200 } }
+    }
+  },
+  "Madhya Pradesh": {
+    "base_rate": 3000,
+    "cities": {
+      "Bhopal": { "base_rate": 4500, "zones": { "prime": 9000, "urban": 4500, "suburban": 2500, "rural": 1200 } },
+      "Indore": { "base_rate": 5000, "zones": { "prime": 10000, "urban": 5000, "suburban": 2800, "rural": 1400 } },
+      "Jabalpur": { "base_rate": 3000, "zones": { "prime": 5500, "urban": 3000, "suburban": 1800, "rural": 800 } },
+      "Gwalior": { "base_rate": 2800, "zones": { "prime": 5000, "urban": 2800, "suburban": 1600, "rural": 750 } }
+    }
+  },
+  "Bihar": {
+    "base_rate": 2500,
+    "cities": {
+      "Patna": { "base_rate": 4500, "zones": { "prime": 9000, "urban": 4500, "suburban": 2500, "rural": 1200 } },
+      "Gaya": { "base_rate": 2200, "zones": { "prime": 4000, "urban": 2200, "suburban": 1300, "rural": 600 } },
+      "Muzaffarpur": { "base_rate": 2000, "zones": { "prime": 3800, "urban": 2000, "suburban": 1200, "rural": 550 } }
+    }
+  },
+  "Odisha": {
+    "base_rate": 2800,
+    "cities": {
+      "Bhubaneswar": { "base_rate": 5000, "zones": { "prime": 10000, "urban": 5000, "suburban": 2800, "rural": 1400 } },
+      "Cuttack": { "base_rate": 3500, "zones": { "prime": 6500, "urban": 3500, "suburban": 2000, "rural": 900 } },
+      "Rourkela": { "base_rate": 2500, "zones": { "prime": 4500, "urban": 2500, "suburban": 1500, "rural": 700 } }
+    }
+  },
+  "Andhra Pradesh": {
+    "base_rate": 4000,
+    "cities": {
+      "Visakhapatnam": { "base_rate": 5500, "zones": { "prime": 11000, "urban": 5500, "suburban": 3000, "rural": 1500 } },
+      "Vijayawada": { "base_rate": 5000, "zones": { "prime": 10000, "urban": 5000, "suburban": 2800, "rural": 1400 } },
+      "Tirupati": { "base_rate": 4000, "zones": { "prime": 8000, "urban": 4000, "suburban": 2200, "rural": 1000 } },
+      "Amaravati": { "base_rate": 3500, "zones": { "prime": 7000, "urban": 3500, "suburban": 2000, "rural": 900 } }
+    }
+  },
+  "Jharkhand": {
+    "base_rate": 2500,
+    "cities": {
+      "Ranchi": { "base_rate": 4000, "zones": { "prime": 8000, "urban": 4000, "suburban": 2200, "rural": 1000 } },
+      "Jamshedpur": { "base_rate": 3500, "zones": { "prime": 7000, "urban": 3500, "suburban": 2000, "rural": 900 } },
+      "Dhanbad": { "base_rate": 2800, "zones": { "prime": 5000, "urban": 2800, "suburban": 1600, "rural": 750 } }
+    }
+  },
+  "Chhattisgarh": {
+    "base_rate": 2500,
+    "cities": {
+      "Raipur": { "base_rate": 4000, "zones": { "prime": 8000, "urban": 4000, "suburban": 2200, "rural": 1000 } },
+      "Bhilai": { "base_rate": 3000, "zones": { "prime": 5500, "urban": 3000, "suburban": 1800, "rural": 800 } },
+      "Bilaspur": { "base_rate": 2500, "zones": { "prime": 4500, "urban": 2500, "suburban": 1500, "rural": 700 } }
+    }
+  },
+  "Assam": {
+    "base_rate": 2200,
+    "cities": {
+      "Guwahati": { "base_rate": 4500, "zones": { "prime": 9000, "urban": 4500, "suburban": 2500, "rural": 1200 } },
+      "Dibrugarh": { "base_rate": 2200, "zones": { "prime": 4000, "urban": 2200, "suburban": 1300, "rural": 600 } }
+    }
+  },
+  "Uttarakhand": {
+    "base_rate": 3500,
+    "cities": {
+      "Dehradun": { "base_rate": 5500, "zones": { "prime": 11000, "urban": 5500, "suburban": 3000, "rural": 1500 } },
+      "Haridwar": { "base_rate": 3500, "zones": { "prime": 7000, "urban": 3500, "suburban": 2000, "rural": 900 } },
+      "Rishikesh": { "base_rate": 4000, "zones": { "prime": 8000, "urban": 4000, "suburban": 2200, "rural": 1000 } }
+    }
+  },
+  "Himachal Pradesh": {
+    "base_rate": 3000,
+    "cities": {
+      "Shimla": { "base_rate": 5000, "zones": { "prime": 10000, "urban": 5000, "suburban": 2800, "rural": 1400 } },
+      "Dharamshala": { "base_rate": 4000, "zones": { "prime": 8000, "urban": 4000, "suburban": 2200, "rural": 1000 } },
+      "Manali": { "base_rate": 5500, "zones": { "prime": 12000, "urban": 5500, "suburban": 3000, "rural": 1500 } }
+    }
+  },
+  "Goa": {
+    "base_rate": 8000,
+    "cities": {
+      "Panaji": { "base_rate": 10000, "zones": { "prime": 20000, "urban": 10000, "suburban": 6000, "rural": 3000 } },
+      "Margao": { "base_rate": 7000, "zones": { "prime": 14000, "urban": 7000, "suburban": 4000, "rural": 2000 } },
+      "Vasco da Gama": { "base_rate": 7500, "zones": { "prime": 15000, "urban": 7500, "suburban": 4200, "rural": 2100 } }
+    }
+  },
+  "Jammu and Kashmir": {
+    "base_rate": 3000,
+    "cities": {
+      "Srinagar": { "base_rate": 5000, "zones": { "prime": 10000, "urban": 5000, "suburban": 2800, "rural": 1400 } },
+      "Jammu": { "base_rate": 4500, "zones": { "prime": 9000, "urban": 4500, "suburban": 2500, "rural": 1200 } }
+    }
+  },
+  "Tripura": {
+    "base_rate": 1800,
+    "cities": {
+      "Agartala": { "base_rate": 2800, "zones": { "prime": 5000, "urban": 2800, "suburban": 1600, "rural": 750 } }
+    }
+  },
+  "Meghalaya": {
+    "base_rate": 2000,
+    "cities": {
+      "Shillong": { "base_rate": 3500, "zones": { "prime": 7000, "urban": 3500, "suburban": 2000, "rural": 900 } }
+    }
+  },
+  "Manipur": {
+    "base_rate": 1800,
+    "cities": {
+      "Imphal": { "base_rate": 3000, "zones": { "prime": 6000, "urban": 3000, "suburban": 1700, "rural": 780 } }
+    }
+  },
+  "Nagaland": {
+    "base_rate": 2000,
+    "cities": {
+      "Dimapur": { "base_rate": 3000, "zones": { "prime": 5500, "urban": 3000, "suburban": 1700, "rural": 780 } },
+      "Kohima": { "base_rate": 2500, "zones": { "prime": 4500, "urban": 2500, "suburban": 1500, "rural": 700 } }
+    }
+  },
+  "Sikkim": {
+    "base_rate": 2500,
+    "cities": {
+      "Gangtok": { "base_rate": 4500, "zones": { "prime": 9000, "urban": 4500, "suburban": 2500, "rural": 1200 } }
+    }
+  },
+  "Arunachal Pradesh": {
+    "base_rate": 1800,
+    "cities": {
+      "Itanagar": { "base_rate": 2500, "zones": { "prime": 4500, "urban": 2500, "suburban": 1400, "rural": 650 } }
+    }
+  },
+  "Mizoram": {
+    "base_rate": 2000,
+    "cities": {
+      "Aizawl": { "base_rate": 3000, "zones": { "prime": 5500, "urban": 3000, "suburban": 1700, "rural": 780 } }
+    }
+  }
+}
