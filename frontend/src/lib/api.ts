@@ -8,8 +8,11 @@
 
 import type { ValuationResult, StateInfo, CityInfo, FormData } from "./types";
 
-const BACKEND_URL =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+let BACKEND_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+// Remove trailing slash if present to prevent // in endpoints
+if (BACKEND_URL.endsWith('/')) {
+  BACKEND_URL = BACKEND_URL.slice(0, -1);
+}
 
 /**
  * Generic fetch wrapper with error handling.
